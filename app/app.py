@@ -1,10 +1,11 @@
 # app/app.py
+import torch
 import streamlit as st
 from PIL import Image
 from predict import load_model, predict
 # Optional Grad-CAM
 from src.inference.gradcam import GradCAM, overlay_cam
-import torch
+
 
 st.set_page_config(page_title="Brain Tumor Classifier MVP")
 st.title("Brain Tumor Classifier — MVP")
@@ -34,4 +35,5 @@ if uploaded_file is not None:
     overlay = overlay_cam(img, cam)
     st.subheader("Grad-CAM Heatmap")
     st.image(overlay, caption="Grad-CAM Overlay", use_column_width=True)
+
 
