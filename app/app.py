@@ -1,7 +1,7 @@
 # app/app.py
 import streamlit as st
 from PIL import Image
-from src.inference.predict import load_model, predict
+from predict import load_model, predict
 # Optional Grad-CAM
 from src.inference.gradcam import GradCAM, overlay_cam
 import torch
@@ -34,3 +34,4 @@ if uploaded_file is not None:
     overlay = overlay_cam(img, cam)
     st.subheader("Grad-CAM Heatmap")
     st.image(overlay, caption="Grad-CAM Overlay", use_column_width=True)
+
