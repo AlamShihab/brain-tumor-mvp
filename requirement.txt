@@ -1,3 +1,4 @@
+streamlit
 torch
 torchvision
 streamlit
@@ -7,5 +8,6 @@ Pillow
 matplotlib
 seaborn
 scikit-learn
+
 
 
